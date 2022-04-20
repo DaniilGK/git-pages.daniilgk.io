@@ -578,12 +578,12 @@ a:hover {
 
 .slider-arrows .slick-arrow.slick-prev {
   left: 20%;
-  background: url(/assets/svg/prev.svg) 0 0/100% no-repeat;
+  background: url(/git-pages.daniilgk.io/finance/assets/svg/prev.svg) 0 0/100% no-repeat;
 }
 
 .slider-arrows .slick-arrow.slick-next {
   right: 20%;
-  background: url(/assets/svg/next.svg) 0 0/100% no-repeat;
+  background: url(/git-pages.daniilgk.io/finance/assets/svg/next.svg) 0 0/100% no-repeat;
 }
 
 .slider-arrows .slick-arrow.slick-next:hover {
@@ -714,7 +714,7 @@ a:hover {
 /*PRICING STOP*/
 /*CONTACTS*/
 .background-input {
-  background: url(/assets/png/contact-cover.png) no-repeat right;
+  background: url(/git-pages.daniilgk.io/finance/assets/png/contact-cover.png) no-repeat right;
   background-size: 50%;
   background-position: 100% 55%;
 }
@@ -1016,8 +1016,6 @@ a:hover {
     height: auto;
   }
   /*PRODUCT STOP*/
-  /*VIDEO*/
-  /*VIDEO STOP*/
   /*CLIENT SAY*/
   .client-title {
     display: none;
@@ -1067,7 +1065,7 @@ a:hover {
   /*PRICING STOP*/
   /*CONTACTS*/
   .background-input {
-    background: url(/assets/png/contact-cover.png) no-repeat center fixed;
+    background: url(/git-pages.daniilgk.io/finance/assets/png/contact-cover.png) no-repeat center fixed;
     background-size: cover;
     background-position: 0 0;
   }
@@ -1103,8 +1101,6 @@ a:hover {
 }
 
 @media (max-width: 425px) {
-  /*HEADER*/
-  /*HEADER STOP*/
   /*HOME SECTION*/
   .home-content {
     margin-top: 140px;
@@ -1245,11 +1241,6 @@ a:hover {
     font-size: 16px;
     font-weight: 700;
   }
-  /*SLIDER*/
-  /*SLIDER STOP*/
-  /*CLIENT ABOUT STOP*/
-  /*PRICING*/
-  /*PRICING STOP*/
   /*CONTACTS*/
   #contact {
     padding: 125px 0;
