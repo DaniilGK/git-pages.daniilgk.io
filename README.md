@@ -1,2 +1,2 @@
 # git-pages.daniilgk.io
-[Finance](https://daniilgk.github.io/git-pages.daniilgk.io/finance/){:target="_blank"}
+[Finance]{:target="_blank"}(https://daniilgk.github.io/git-pages.daniilgk.io/finance/)
