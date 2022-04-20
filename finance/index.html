@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/svg/favicon.svg">
+    <title>Financely</title>
+</head>
+<body>
+
+    <svg display="none">
+        <symbol id="search" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1901 15.478L23.6458 21.9337C23.8727 22.1608 24.0001 22.4687 24 22.7897C23.9999 23.1107 23.8723 23.4185 23.6452 23.6455C23.4181 23.8724 23.1102 23.9998 22.7892 23.9997C22.4682 23.9995 22.1604 23.8719 21.9335 23.6449L15.4778 17.1892C13.5479 18.6839 11.1211 19.3873 8.69104 19.1563C6.26097 18.9253 4.01018 17.7772 2.39656 15.9455C0.782936 14.1139 -0.0723147 11.7364 0.00479537 9.29657C0.0819054 6.85677 1.08558 4.53797 2.81165 2.8119C4.53771 1.08584 6.85651 0.082161 9.29632 0.00505095C11.7361 -0.0720591 14.1137 0.783191 15.9453 2.39682C17.7769 4.01044 18.925 6.26123 19.156 8.6913C19.387 11.1214 18.6836 13.5482 17.1889 15.478H17.1901ZM9.60045 16.7992C11.5099 16.7992 13.3412 16.0406 14.6914 14.6904C16.0416 13.3402 16.8001 11.509 16.8001 9.5995C16.8001 7.69003 16.0416 5.85877 14.6914 4.50857C13.3412 3.15837 11.5099 2.39984 9.60045 2.39984C7.69098 2.39984 5.85971 3.15837 4.50951 4.50857C3.15932 5.85877 2.40078 7.69003 2.40078 9.5995C2.40078 11.509 3.15932 13.3402 4.50951 14.6904C5.85971 16.0406 7.69098 16.7992 9.60045 16.7992V16.7992Z"/>
+        </symbol>
+        
+        <symbol id="basket" viewBox="0 0 24 23">
+            <g clip-path="url(#clip0_1479_9225)">
+                <path d="M7.9999 22.4002C8.88356 22.4002 9.5999 21.6838 9.5999 20.8002C9.5999 19.9165 8.88356 19.2002 7.9999 19.2002C7.11625 19.2002 6.3999 19.9165 6.3999 20.8002C6.3999 21.6838 7.11625 22.4002 7.9999 22.4002Z"/>
+                <path d="M19.2001 22.4002C20.0838 22.4002 20.8001 21.6838 20.8001 20.8002C20.8001 19.9165 20.0838 19.2002 19.2001 19.2002C18.3164 19.2002 17.6001 19.9165 17.6001 20.8002C17.6001 21.6838 18.3164 22.4002 19.2001 22.4002Z"/>
+                <path d="M22.4 4.00016H4.656L4 0.640163C3.9626 0.456742 3.86206 0.292245 3.71589 0.175305C3.56971 0.0583653 3.38716 -0.00361159 3.2 0.000162751H0V1.60016H2.544L5.6 16.9602C5.6374 17.1436 5.73794 17.3081 5.88411 17.425C6.03029 17.542 6.21284 17.6039 6.4 17.6002H20.8V16.0002H7.056L6.4 12.8002H20.8C20.9849 12.8047 21.1657 12.745 21.3116 12.6312C21.4574 12.5174 21.5594 12.3566 21.6 12.1762L23.2 4.97616C23.2268 4.85746 23.2262 4.73421 23.1982 4.61579C23.1702 4.49737 23.1155 4.38689 23.0384 4.29278C22.9612 4.19867 22.8636 4.12339 22.753 4.07268C22.6424 4.02198 22.5217 3.99717 22.4 4.00016ZM20.16 11.2002H6.096L4.976 5.60016H21.4L20.16 11.2002Z"/>
+            </g>
+        </symbol>
+
+        <symbol id="burg-menu" viewBox="0 0 24 14">
+            <path d="M0.571289 0H23.4284V2.28571H0.571289V0ZM6.28557 5.71429H23.4284V8H6.28557V5.71429ZM13.4284 11.4286H23.4284V13.7143H13.4284V11.4286Z"/>
+        </symbol>
+
+        <symbol id="people" viewBox="0 0 48 38">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M45.9165 37.6667C45.9165 37.6667 48.9998 37.6667 48.9998 34.5556C48.9998 31.4445 45.9165 22.1112 33.5832 22.1112C21.2498 22.1112 18.1665 31.4445 18.1665 34.5556C18.1665 37.6667 21.2498 37.6667 21.2498 37.6667H45.9165ZM21.3177 34.5556H45.8487C45.8631 34.5539 45.8775 34.5518 45.8918 34.5494L45.9165 34.5432C45.9103 33.7218 45.4016 31.3387 43.5732 29.192C41.8712 27.1791 38.8803 25.2223 33.5832 25.2223C28.2891 25.2223 25.2983 27.1823 23.5932 29.192C21.7648 31.3387 21.2529 33.7249 21.2498 34.5432C21.2724 34.5475 21.295 34.5517 21.3177 34.5556ZM33.5832 15.8889C35.2187 15.8889 36.7872 15.2334 37.9437 14.0665C39.1001 12.8996 39.7498 11.3169 39.7498 9.66671C39.7498 8.01647 39.1001 6.43382 37.9437 5.26693C36.7872 4.10004 35.2187 3.44448 33.5832 3.44448C31.9477 3.44448 30.3792 4.10004 29.2227 5.26693C28.0662 6.43382 27.4165 8.01647 27.4165 9.66671C27.4165 11.3169 28.0662 12.8996 29.2227 14.0665C30.3792 15.2334 31.9477 15.8889 33.5832 15.8889ZM42.8332 9.66671C42.8332 10.8924 42.5939 12.106 42.1291 13.2384C41.6642 14.3708 40.9828 15.3997 40.1239 16.2664C39.265 17.133 38.2453 17.8205 37.123 18.2896C36.0007 18.7586 34.7979 19 33.5832 19C32.3684 19 31.1656 18.7586 30.0433 18.2896C28.9211 17.8205 27.9014 17.133 27.0424 16.2664C26.1835 15.3997 25.5021 14.3708 25.0373 13.2384C24.5724 12.106 24.3332 10.8924 24.3332 9.66671C24.3332 7.19135 25.3077 4.81738 27.0424 3.06704C28.7771 1.3167 31.1299 0.333374 33.5832 0.333374C36.0364 0.333374 38.3892 1.3167 40.1239 3.06704C41.8586 4.81738 42.8332 7.19135 42.8332 9.66671ZM21.0525 22.9823C19.8191 22.5904 18.5477 22.3328 17.26 22.2138C16.5364 22.1444 15.81 22.1101 15.0832 22.1112C2.74984 22.1112 -0.333496 31.4445 -0.333496 34.5556C-0.333496 36.6307 0.693254 37.6667 2.74984 37.6667H15.7492C15.2921 36.6955 15.0641 35.6306 15.0832 34.5556C15.0832 31.4134 16.2456 28.2027 18.444 25.5209C19.1933 24.6063 20.0658 23.7507 21.0525 22.9823ZM14.8365 25.2223C9.6935 25.2845 6.77359 27.2134 5.09317 29.192C3.25242 31.3512 2.74984 33.7436 2.74984 34.5556H11.9998C11.9998 31.3045 12.9958 28.0658 14.8365 25.2223ZM4.2915 11.2223C4.2915 8.74691 5.26605 6.37294 7.00077 4.6226C8.73548 2.87226 11.0883 1.88893 13.5415 1.88893C15.9948 1.88893 18.3475 2.87226 20.0822 4.6226C21.817 6.37294 22.7915 8.74691 22.7915 11.2223C22.7915 13.6976 21.817 16.0716 20.0822 17.8219C18.3475 19.5723 15.9948 20.5556 13.5415 20.5556C11.0883 20.5556 8.73548 19.5723 7.00077 17.8219C5.26605 16.0716 4.2915 13.6976 4.2915 11.2223ZM13.5415 5.00004C11.906 5.00004 10.3375 5.65559 9.18101 6.82249C8.02454 7.98938 7.37484 9.57203 7.37484 11.2223C7.37484 12.8725 8.02454 14.4551 9.18101 15.622C10.3375 16.7889 11.906 17.4445 13.5415 17.4445C15.177 17.4445 16.7455 16.7889 17.902 15.622C19.0585 14.4551 19.7082 12.8725 19.7082 11.2223C19.7082 9.57203 19.0585 7.98938 17.902 6.82249C16.7455 5.65559 15.177 5.00004 13.5415 5.00004Z"/>
+        </symbol>
+
+        <symbol id="star" viewBox="0 0 25 25">
+            <path d="M24.7035 9.16775C24.627 8.94251 24.4862 8.74459 24.2985 8.59842C24.1109 8.45226 23.8845 8.36426 23.6474 8.34529L16.7112 7.79414L13.7097 1.14992C13.6141 0.935922 13.4586 0.754163 13.262 0.626579C13.0654 0.498994 12.836 0.431037 12.6017 0.430908C12.3673 0.43078 12.1379 0.498485 11.9411 0.625854C11.7444 0.753223 11.5887 0.934811 11.4929 1.1487L8.49137 7.79414L1.55515 8.34529C1.32211 8.36375 1.09931 8.44896 0.913428 8.59072C0.727541 8.73249 0.586434 8.92481 0.506986 9.14467C0.427538 9.36453 0.413113 9.60263 0.465439 9.83047C0.517764 10.0583 0.634623 10.2663 0.802036 10.4294L5.92785 15.4263L4.11502 23.2762C4.05997 23.5138 4.07762 23.7625 4.16566 23.99C4.2537 24.2174 4.40807 24.4132 4.60874 24.5518C4.80942 24.6905 5.04713 24.7656 5.29103 24.7674C5.53493 24.7693 5.77376 24.6978 5.97652 24.5622L12.6013 20.1457L19.226 24.5622C19.4333 24.6998 19.6777 24.7707 19.9264 24.7652C20.1751 24.7598 20.4161 24.6783 20.6171 24.5317C20.8182 24.3852 20.9695 24.1806 21.0507 23.9455C21.132 23.7104 21.1393 23.456 21.0717 23.2166L18.8464 15.4299L24.3652 10.4635C24.7266 10.1374 24.8592 9.62887 24.7035 9.16775Z" fill="#F3CD03"/>
+        </symbol>
+
+        <symbol id="emptyStar" viewBox="0 0 25 25">
+            <path d="M5.7279 15.4264L3.91506 23.2763C3.85893 23.514 3.87578 23.7631 3.96342 23.9911C4.05106 24.2191 4.20541 24.4153 4.40632 24.5542C4.60722 24.6931 4.84534 24.7682 5.08958 24.7696C5.33381 24.7711 5.5728 24.6988 5.77535 24.5624L12.4001 20.1459L19.0248 24.5624C19.2321 24.7 19.4765 24.7708 19.7252 24.7653C19.9739 24.7599 20.215 24.6784 20.416 24.5318C20.617 24.3853 20.7683 24.1807 20.8496 23.9456C20.9308 23.7105 20.9381 23.4561 20.8705 23.2167L18.6452 15.4301L24.164 10.4636C24.3408 10.3045 24.467 10.097 24.5271 9.86686C24.5872 9.63673 24.5785 9.39403 24.5022 9.16878C24.4258 8.94353 24.285 8.7456 24.0974 8.59948C23.9097 8.45336 23.6833 8.36545 23.4462 8.34662L16.51 7.79426L13.5085 1.15004C13.4128 0.936098 13.2572 0.754425 13.0605 0.626949C12.8638 0.499472 12.6345 0.431641 12.4001 0.431641C12.1657 0.431641 11.9364 0.499472 11.7397 0.626949C11.543 0.754425 11.3874 0.936098 11.2917 1.15004L8.2902 7.79426L1.35398 8.34541C1.12093 8.36387 0.898142 8.44908 0.712256 8.59085C0.52637 8.73261 0.385262 8.92493 0.305814 9.14479C0.226366 9.36466 0.211941 9.60275 0.264267 9.8306C0.316592 10.0584 0.433451 10.2664 0.600864 10.4296L5.7279 15.4264ZM9.19905 10.1631C9.41622 10.146 9.62478 10.0708 9.80288 9.94534C9.98098 9.8199 10.1221 9.64886 10.2113 9.45014L12.4001 4.60659L14.5889 9.45014C14.6781 9.64886 14.8192 9.8199 14.9973 9.94534C15.1754 10.0708 15.384 10.146 15.6011 10.1631L20.4337 10.5464L16.454 14.1282C16.1085 14.4397 15.971 14.9191 16.0975 15.3668L17.622 20.7019L13.0766 17.6712C12.8771 17.5373 12.6422 17.4657 12.4019 17.4657C12.1616 17.4657 11.9268 17.5373 11.7273 17.6712L6.97741 20.8381L8.25491 15.3072C8.30175 15.1038 8.29547 14.8917 8.23666 14.6914C8.17785 14.4911 8.0685 14.3093 7.91911 14.1635L4.22288 10.5597L9.19905 10.1631Z" fill="#F3CD03"/>
+        </symbol>
+
+        <symbol id="okey" viewBox="0 0 33 32">
+            <rect x="0.5" width="32" height="32" rx="16" fill="#2DC071"/>
+            <g clip-path="url(#clip0_1479_9396)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2957 10.2019C24.3604 10.2658 24.4118 10.3416 24.4469 10.4251C24.482 10.5086 24.5 10.5982 24.5 10.6886C24.5 10.779 24.482 10.8685 24.4469 10.952C24.4118 11.0355 24.3604 11.1114 24.2957 11.1752L14.5578 20.7981C14.4932 20.8621 14.4164 20.9129 14.3319 20.9475C14.2474 20.9822 14.1568 21 14.0654 21C13.9739 21 13.8833 20.9822 13.7988 20.9475C13.7143 20.9129 13.6375 20.8621 13.5729 20.7981L8.70398 15.9866C8.57337 15.8576 8.5 15.6825 8.5 15.5C8.5 15.3175 8.57337 15.1424 8.70398 15.0134C8.83459 14.8843 9.01173 14.8118 9.19644 14.8118C9.38115 14.8118 9.55829 14.8843 9.6889 15.0134L14.0654 19.3395L23.3107 10.2019C23.3754 10.1379 23.4521 10.0871 23.5366 10.0525C23.6211 10.0178 23.7117 10 23.8032 10C23.8947 10 23.9853 10.0178 24.0698 10.0525C24.1543 10.0871 24.231 10.1379 24.2957 10.2019Z" fill="white"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_1479_9396">
+            <rect width="16" height="11" fill="white" transform="translate(8.5 10)"/>
+            </clipPath>
+            </defs>
+        </symbol>
+
+        <symbol id="emptyOkey" viewBox="0 0 33 32">
+            <rect x="0.5" width="32" height="32" rx="16" fill="#BDBDBD"/>
+            <g clip-path="url(#clip0_1479_9416)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2957 10.2019C24.3604 10.2658 24.4118 10.3416 24.4469 10.4251C24.482 10.5086 24.5 10.5982 24.5 10.6886C24.5 10.779 24.482 10.8685 24.4469 10.952C24.4118 11.0355 24.3604 11.1114 24.2957 11.1752L14.5578 20.7981C14.4932 20.8621 14.4164 20.9129 14.3319 20.9475C14.2474 20.9822 14.1568 21 14.0654 21C13.9739 21 13.8833 20.9822 13.7988 20.9475C13.7143 20.9129 13.6375 20.8621 13.5729 20.7981L8.70398 15.9866C8.57337 15.8576 8.5 15.6825 8.5 15.5C8.5 15.3175 8.57337 15.1424 8.70398 15.0134C8.83459 14.8843 9.01173 14.8118 9.19644 14.8118C9.38115 14.8118 9.55829 14.8843 9.6889 15.0134L14.0654 19.3395L23.3107 10.2019C23.3754 10.1379 23.4521 10.0871 23.5366 10.0525C23.6211 10.0178 23.7117 10 23.8032 10C23.8947 10 23.9853 10.0178 24.0698 10.0525C24.1543 10.0871 24.231 10.1379 24.2957 10.2019Z" fill="white"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_1479_9416">
+            <rect width="16" height="11" fill="white" transform="translate(8.5 10)"/>
+            </clipPath>
+            </defs>
+        </symbol>
+
+        <symbol id="next" viewBox="0 0 27 44">
+            <path d="M5.18326 0.277344L0.169922 5.32984L16.4544 21.7773L0.169922 38.2248L5.18326 43.2773L26.5166 21.7773L5.18326 0.277344Z"/>
+        </symbol>
+
+        <symbol id="prev" viewBox="0 0 27 44">
+            <path d="M21.8167 43.2773L26.8301 38.2248L10.5456 21.7773L26.8301 5.32985L21.8167 0.277349L0.483413 21.7773L21.8167 43.2773Z" fill="#BDBDBD"/>
+        </symbol>
+
+        <symbol id="facebook" viewBox="0 0 23 23">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M23 11.5704C23 5.1801 17.8515 0 11.5014 0C5.14848 0.00143732 0 5.1801 0 11.5719C0 17.3456 4.2056 22.1319 9.70191 23V14.9151H6.78415V11.5719H9.70479V9.02062C9.70479 6.12155 11.4224 4.52037 14.0484 4.52037C15.3075 4.52037 16.6226 4.74603 16.6226 4.74603V7.59193H15.1724C13.7451 7.59193 13.2995 8.4845 13.2995 9.40008V11.5704H16.4875L15.9787 14.9136H13.2981V22.9986C18.7944 22.1304 23 17.3441 23 11.5704Z"/>
+        </symbol>
+
+        <symbol id="twitter" viewBox="0 0 22 18">
+            <path d="M6.91075 18C15.213 18 19.7546 11.0731 19.7546 5.07669C19.7546 4.88285 19.7546 4.68625 19.7464 4.49241C20.6306 3.84789 21.3937 3.04993 22 2.13592C21.1741 2.50262 20.2988 2.7443 19.4026 2.85312C20.3466 2.28495 21.0536 1.391 21.3923 0.337403C20.5054 0.86647 19.5346 1.23787 18.5226 1.43534C17.8423 0.705724 16.9419 0.222372 15.9611 0.0601592C14.9803 -0.102054 13.9737 0.0659244 13.0973 0.538075C12.2209 1.01023 11.5236 1.7602 11.1134 2.67182C10.7031 3.58345 10.6029 4.60585 10.8281 5.58066C9.03339 5.49005 7.27762 5.02057 5.67468 4.20269C4.07175 3.3848 2.65744 2.23678 1.5235 0.833069C0.947843 1.83421 0.772164 3.01843 1.03214 4.14526C1.29211 5.27209 1.96825 6.25705 2.92325 6.90013C2.20762 6.87565 1.50772 6.68215 0.88 6.33524V6.39754C0.881234 7.44631 1.24205 8.46247 1.90145 9.27429C2.56086 10.0861 3.4784 10.6438 4.499 10.853C4.11161 10.9605 3.71144 11.014 3.30963 11.0122C3.02635 11.0131 2.74365 10.9867 2.46537 10.9333C2.75383 11.8361 3.3155 12.6254 4.07171 13.1908C4.82793 13.7561 5.74081 14.0691 6.6825 14.0859C5.08276 15.3511 3.10668 16.0373 1.0725 16.034C0.714066 16.0355 0.355882 16.0147 0 15.9716C2.06458 17.297 4.46228 18.0008 6.91075 18Z"/>
+        </symbol>
+
+        <symbol id="inst" viewBox="0 0 22 22">
+            <path d="M11 0C8.01488 0 7.6395 0.01375 6.46663 0.066C5.29375 0.121 4.49487 0.30525 3.795 0.5775C3.06088 0.853626 2.39593 1.28676 1.84663 1.84663C1.2871 2.39621 0.854023 3.06108 0.5775 3.795C0.30525 4.4935 0.119625 5.29375 0.066 6.4625C0.01375 7.63812 0 8.01213 0 11.0014C0 13.9879 0.01375 14.3619 0.066 15.5347C0.121 16.7063 0.30525 17.5051 0.5775 18.205C0.859375 18.9282 1.23475 19.5415 1.84663 20.1534C2.45713 20.7652 3.07037 21.142 3.79363 21.4225C4.49487 21.6947 5.29238 21.8804 6.46388 21.934C7.63813 21.9862 8.01213 22 11 22C13.9879 22 14.3605 21.9862 15.5347 21.934C16.7049 21.879 17.5065 21.6947 18.2064 21.4225C18.94 21.1462 19.6045 20.7131 20.1534 20.1534C20.7652 19.5415 21.1406 18.9282 21.4225 18.205C21.6934 17.5051 21.879 16.7063 21.934 15.5347C21.9862 14.3619 22 13.9879 22 11C22 8.01213 21.9862 7.63813 21.934 6.46388C21.879 5.29375 21.6934 4.4935 21.4225 3.795C21.146 3.06106 20.7129 2.39618 20.1534 1.84663C19.6042 1.28655 18.9392 0.853387 18.205 0.5775C17.5037 0.30525 16.7035 0.119625 15.5334 0.066C14.3591 0.01375 13.9865 0 10.9973 0H11.0014H11ZM10.0141 1.98275H11.0014C13.9384 1.98275 14.2863 1.99238 15.4454 2.046C16.5179 2.09413 17.1009 2.27425 17.4886 2.42412C18.0015 2.6235 18.3686 2.86275 18.7536 3.24775C19.1386 3.63275 19.3765 3.9985 19.5759 4.51275C19.7271 4.89913 19.9059 5.48213 19.954 6.55463C20.0076 7.71375 20.0186 8.06163 20.0186 10.9973C20.0186 13.9329 20.0076 14.2821 19.954 15.4412C19.9059 16.5138 19.7257 17.0954 19.5759 17.4831C19.3995 17.9607 19.118 18.3926 18.7522 18.7467C18.3672 19.1318 18.0015 19.3696 17.4873 19.569C17.1023 19.7203 16.5192 19.899 15.4454 19.9485C14.2863 20.0007 13.9384 20.0131 11.0014 20.0131C8.06438 20.0131 7.71513 20.0007 6.556 19.9485C5.4835 19.899 4.90188 19.7203 4.51412 19.569C4.03631 19.3929 3.60405 19.1119 3.24913 18.7467C2.88303 18.392 2.60112 17.9598 2.42412 17.4818C2.27425 17.0954 2.09413 16.5124 2.046 15.4399C1.99375 14.2808 1.98275 13.9329 1.98275 10.9945C1.98275 8.0575 1.99375 7.711 2.046 6.55187C2.0955 5.47937 2.27425 4.89638 2.4255 4.50863C2.62488 3.99575 2.86412 3.62862 3.24913 3.24362C3.63412 2.85862 3.99988 2.62075 4.51412 2.42138C4.90188 2.27013 5.4835 2.09138 6.556 2.04188C7.57075 1.99513 7.964 1.98138 10.0141 1.98V1.98275ZM16.8726 3.80875C16.6993 3.80875 16.5276 3.84289 16.3675 3.90923C16.2073 3.97557 16.0618 4.0728 15.9392 4.19537C15.8167 4.31794 15.7194 4.46346 15.6531 4.62361C15.5868 4.78376 15.5526 4.95541 15.5526 5.12875C15.5526 5.30209 15.5868 5.47374 15.6531 5.63389C15.7194 5.79404 15.8167 5.93956 15.9392 6.06213C16.0618 6.1847 16.2073 6.28193 16.3675 6.34827C16.5276 6.41461 16.6993 6.44875 16.8726 6.44875C17.2227 6.44875 17.5585 6.30968 17.806 6.06213C18.0536 5.81458 18.1926 5.47884 18.1926 5.12875C18.1926 4.77866 18.0536 4.44292 17.806 4.19537C17.5585 3.94782 17.2227 3.80875 16.8726 3.80875ZM11.0014 5.3515C10.2521 5.33981 9.50798 5.47729 8.81234 5.75594C8.11671 6.0346 7.48346 6.44885 6.94946 6.97458C6.41546 7.50032 5.99138 8.12703 5.70191 8.81823C5.41244 9.50944 5.26336 10.2513 5.26336 11.0007C5.26336 11.7501 5.41244 12.4919 5.70191 13.1831C5.99138 13.8743 6.41546 14.5011 6.94946 15.0268C7.48346 15.5525 8.11671 15.9668 8.81234 16.2454C9.50798 16.5241 10.2521 16.6616 11.0014 16.6499C12.4844 16.6267 13.8988 16.0214 14.9393 14.9645C15.9799 13.9076 16.5631 12.4839 16.5631 11.0007C16.5631 9.51751 15.9799 8.09382 14.9393 7.03691C13.8988 5.97999 12.4844 5.37464 11.0014 5.3515ZM11.0014 7.33288C11.974 7.33288 12.9067 7.71923 13.5944 8.40695C14.2821 9.09467 14.6685 10.0274 14.6685 11C14.6685 11.9726 14.2821 12.9053 13.5944 13.593C12.9067 14.2808 11.974 14.6671 11.0014 14.6671C10.0288 14.6671 9.09605 14.2808 8.40833 13.593C7.72061 12.9053 7.33425 11.9726 7.33425 11C7.33425 10.0274 7.72061 9.09467 8.40833 8.40695C9.09605 7.71923 10.0288 7.33288 11.0014 7.33288Z"/>
+        </symbol>
+    </svg>
+
+    <header id="header">
+        <div class="wrapper">
+            <div class="header-content">
+                <a href="" class="header-logo title-text">BrandName</a>
+
+                <div class="header-nav-container">
+                    <ul class="header-nav">
+                        <li class="header-nav-item subtitle-text">
+                            <a href="#home">Home</a>
+                        </li>
+
+                        <li class="header-nav-item subtitle-text">
+                            <a href="#product">Product</a>
+                        </li>
+
+                        <li class="header-nav-item subtitle-text">
+                            <a href="#pricing">Pricing</a>
+                        </li>
+
+                        <li class="header-nav-item subtitle-text">
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="login-and-button subtitle-text">
+                    <a class="blue-text" href="">Login</a>
+                    <button class="blue-button member-butt">Become a member</button>
+                </div>
+                <div class="header-nav-with-burg">
+                    <ul class="header-nav-list">
+                        <li class="header-nav-item search-button">
+                            <svg class="header-nav-item-svg">
+                                <use xlink:href="#search"></use>
+                            </svg>
+                        </li>
+    
+                        <li class="header-nav-item">
+                            <svg class="header-nav-item-svg">
+                                <use xlink:href="#basket"></use>
+                            </svg>
+                        </li>
+    
+                        <li class="header-nav-item burger-button">
+                            <div class="burger-batton">
+                                <span></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="search-line">
+                    <input class="search-input" type="search" placeholder="search...">
+                </div>
+
+                <div class="burger-menu">
+                    <ul class="burger-list">
+                        <li class="title-text">
+                            <a class="burger-item" href="#home">Home</a>
+                        </li>
+
+                        <li class="title-text">
+                            <a class="burger-item" href="#product">Product</a>
+                        </li>
+
+                        <li class="title-text">
+                            <a class="burger-item" href="#pricing">Pricing</a>
+                        </li>
+
+                        <li class="title-text">
+                            <a class="burger-item" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section id="home">
+            <div class="wrapper">
+                <div class="home-content">
+                    <div class="home-text-and-butt">
+                        <h1 class="home-title title-text">Financial Assistance With True Purpose</h1>
+                        <h2 class="home-subtitle subtitle-text">We know how large objects will act, but things on a small scale just do not act that way</h2>
+
+                        <div class="home-button-container">
+                            <button class="home-button button-text">Get Quote Now</button>
+                            <button class="home-button button-text">Learn More</button>
+                        </div>
+                    </div>
+                    <img class="home-img" src="/assets/jpg/home.jpg" alt="home image"> 
+                </div> 
+            </div>              
+        </section>
+
+        <section id="product">
+            <div class="wrapper">
+                <div class="places-cards-product">
+                    <div class="cards-product">
+                        <div class="cards-product-content">
+                            <svg class="people-svg">
+                                <use xlink:href="#people"></use>
+                            </svg>
+                            <div class="cards-product-text">
+                                <h1 class="cards-title title-text">OpenType features and Variable fonts</h1>
+                                <h2 class="cards-subtitle subtitle-text">We focus on ergonomics and meeting you where you work. </h2>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="cards-product">
+                        <div class="cards-product-content">
+                            <svg class="people-svg">
+                                <use xlink:href="#people"></use>
+                            </svg>
+                            <div class="cards-product-text">
+                                <h1 class="cards-title title-text">OpenType features and Variable fonts</h1>
+                                <h2 class="cards-subtitle subtitle-text">We focus on ergonomics and meeting you where you work. </h2>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="cards-product">
+                        <div class="cards-product-content">
+                            <svg class="people-svg">
+                                <use xlink:href="#people"></use>
+                            </svg>
+                            <div class="cards-product-text">
+                                <h1 class="cards-title title-text">OpenType features and Variable fonts</h1>
+                                <h2 class="cards-subtitle subtitle-text">We focus on ergonomics and meeting you where you work. </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="video">
+            <div class="wrapper">
+                <div class="text-and-video">
+                    <div class="title-and-subtitle">
+                        <h1 class="title-text">Better Strategy With Quality Business</h1>
+                        <p class="subtitle-text">Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics </p>
+                    </div>
+                    
+                    <div class="video-player">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bNpx7gpSqbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="background-video"></div>
+        </section>
+
+        <section id="clients-say">
+            <div class="wrapper">
+                <div class="what-clients-say">
+                    <div class="title-and-subtitle client-title">
+                        <h1 class="title-text">What Clients Say</h1>
+                        <p class="subtitle-text">Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics</p>
+                    </div>
+
+                    <p class="subtitle-text client-subtitle">Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics</p>
+    
+                    <div class="client-cards">
+                        <img class="client-avatar" src="./assets/png/user.1.png" alt="client avatar">
+    
+                        <div class="client-info">
+                            <p class="subtitle-text">Slate helps you see how many more days you need to work to reach your financial goal for the month and year.</p>
+    
+                            <div class="client-rating">
+                                <svg class="stars-svg">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="stars-svg">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="stars-svg">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="stars-svg">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="stars-svg">
+                                    <use xlink:href="#emptyStar"></use>
+                                </svg>
+                            </div>
+    
+                            <div class="title-and-subtitle">
+                                <h1 class="title-text">Regina Miles</h1>
+                                <p class="subtitle-text">Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="clients-about">
+            <div class="wrapper">
+                <div class="title-and-subtitle slider-title">
+                    <h1 class="title-text">About Us</h1>
+                    <p class="subtitle-text">Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics</p>
+                </div>
+
+                <div class="title-and-subtitle slider-title-blue">
+                    <p class="table-of-contents blue-text">client stories</p>
+                    <h1 class="title-text">Designing Better Experience</h1>
+                    <p class="subtitle-text">Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics</p>
+                </div>
+
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slider-item">
+                            <img class="img" src="/assets/jpg/slide1.jpg" alt="city">
+                        </div>
+        
+                        <div class="slider-item">
+                            <img class="img" src="/assets/jpg/slide2.jpg" alt="city">
+                        </div>
+        
+                        <div class="slider-item">
+                            <img class="img" src="/assets/jpg/slide3.jpg" alt="city">
+                        </div>
+        
+                        <div class="slider-item">
+                            <img class="img" src="/assets/jpg/slide4.jpg" width="100%" alt="city">
+                        </div>
+                    </div>
+        
+                    <div class="slider-text">
+                        <h1 class="slider-title-text title-text">A rethink of how we work</h1>
+                        <p class="slider-subtitle-text subtitle-text">Slate helps you see how many more days you need to work to reach your financial goal for the month and year.When you add work to your Slate calendar we automatically calculate useful insights about the financial health of your business.</p>
+                        <p class="slider-auctor-text auctor-text">Jim - Product Designer</p>
+                    </div>
+        
+                    <div class="slider-arrows">
+                        <p class="slider-count subtitle-text">1 / 4</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing">
+            <div class="wrapper">
+                <div class="title-and-subtitle">
+                    <h1 class="title-text">Pricing</h1>
+                    <p class="subtitle-text">Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics</p>
+                </div>
+
+                <div class="places-cards-pricing">
+                    <div class="pricing-cards">
+                        <div class="title-and-subtitle">
+                            <h1 class="title-text">FREE</h1>
+                            <p class="subtitle-text">Organize across all apps by hand</p>
+                        </div>
+    
+                        <div class="price">
+                            <p class="number-price">0</p>
+    
+                            <div class="currency-month">
+                                <p class="currency">$</p>
+                                <p class="per-month">Per month</p>
+                            </div>
+                        </div>
+    
+                        <div class="parameter-pricing">
+                            <div class="parameter-item">
+                                <svg class="okey-svg">
+                                    <use xlink:href="#okey"></use>
+                                </svg>
+                                <p class="subtitle-text-black">Unlimited product updates</p>
+                            </div>
+
+                            <div class="parameter-item">
+                                <svg class="okey-svg">
+                                    <use xlink:href="#okey"></use>
+                                </svg>
+                                <p class="subtitle-text-black">Unlimited product updates</p>
+                            </div>
+
+                            <div class="parameter-item">
+                                <svg class="okey-svg">
+                                    <use xlink:href="#okey"></use>
+                                </svg>
+                                <p class="subtitle-text-black">Unlimited product updates</p>
+                            </div>
+
+                            <div class="parameter-item">
+                                <svg class="okey-svg">
+                                    <use xlink:href="#emptyOkey"></use>
+                                </svg>
+                                <p class="subtitle-text-black">1GB Cloud storage</p>
+                            </div>
+
+                            <div class="parameter-item">
+                                <svg class="okey-svg">
+                                    <use xlink:href="#emptyOkey"></use>
+                                </svg>
+                                <p class="subtitle-text-black">Email and community support</p>
+                            </div>
+                        </div>
+    
+                        <button class="blue-button price-button">Try for free</button>
+                    </div>
+    
+                    <div class="pricing-cards">
+                        <div class="title-and-subtitle">
+                            <h1 class="title-text">PREMIUM</h1>
+                            <p class="subtitle-text">Organize across all apps by hand</p>
+                        </div>
+    
+                        <div class="price">
+                            <p class="number-price">19</p>
+    
+                            <div class="currency-month">
+                                <p class="currency">$</p>
+                                <p class="per-month">Per month</p>
+                            </div>
+                        </div>
+    
+                        <div class="parameter-pricing">
+                            <div class="parameter-item">
+                                <svg class="okey-svg">
+                                    <use xlink:href="#okey"></use>
+                                </svg>
+                                <p class="subtitle-text-black">Unlimited product updates</p>
+                            </div>
+
+                            <div class="parameter-item">
+                                <svg class="okey-svg">
+                                    <use xlink:href="#okey"></use>
+                                </svg>
+                                <p class="subtitle-text-black">Unlimited product updates</p>
+                            </div>
+
+                            <div class="parameter-item">
+                                <svg class="okey-svg">
+                                    <use xlink:href="#okey"></use>
+                                </svg>
+                                <p class="subtitle-text-black">Unlimited product updates</p>
+                            </div>
+
+                            <div class="parameter-item">
+                                <svg class="okey-svg">
+                                    <use xlink:href="#emptyOkey"></use>
+                                </svg>
+                                <p class="subtitle-text-black">1GB Cloud storage</p>
+                            </div>
+
+                            <div class="parameter-item">
+                                <svg class="okey-svg">
+                                    <use xlink:href="#emptyOkey"></use>
+                                </svg>
+                                <p class="subtitle-text-black">Email and community support</p>
+                            </div>
+                        </div>
+    
+                        <button class="blue-button price-button">Try for free</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="background-input">
+                <div class="wrapper">
+                    <div class="input-with-button">
+                        <div class="input-text">
+                            <p class="table-of-contents">Contact Us</p>
+                            <h1 class="title-text text-center">Make an Appointment</h1>
+                        </div>
+        
+                        <div class="input-places">
+                            <div class="four-input">
+                                <input class="input-style" type="text" placeholder="Full Name">
+                                <input class="input-style" type="email" placeholder="example@gmail.com">
+                                <input class="input-style" type="text" placeholder="Please Select">
+                                <input class="input-style" type="text" placeholder="4:00 Available">
+                            </div>
+                            <textarea class="input-style message-input" type="text" placeholder="Message"></textarea>
+                        </div>
+                        <button class="contacts-button blue-button">Book Appointment</button>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="contact-us">
+                    <div class="title-and-subtitle">
+                        <h1 class="title-text">Consulting Agency For Your Business</h1>
+                        <p class="subtitle-text">the quick fox jumps over the lazy dog</p>
+                    </div>
+                    <button class="contacts-button blue-button">Contact Us</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="wrapper">
+            <div class="footer-nav">
+                <div class="footer-nav-list">
+                    <h1 class="title-text">Get in Touch</h1>
+                    <p class="subtitle-text">the quick fox jumps over the lazy dog</p>
+    
+                    <div class="social-svg">
+                        <svg class="footer-svg">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+    
+                        <svg class="footer-svg">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+    
+                        <svg class="footer-svg">
+                            <use xlink:href="#inst"></use>
+                        </svg>
+                    </div>
+                </div>
+    
+                <ul class="footer-nav-list">
+                    <h1 class="title-text">Company info</h1>
+    
+                    <li class="footer-nav-item subtitle-text">
+                        <a href="#">About Us</a>
+                    </li>
+                    
+                    <li class="footer-nav-item subtitle-text">
+                        <a href="#">Carrier</a>
+                    </li>
+    
+                    <li class="footer-nav-item subtitle-text">
+                        <a href="#">We are hiring</a>
+                    </li>
+    
+                    <li class="footer-nav-item subtitle-text">
+                        <a href="#">Blog</a>
+                    </li>
+                </ul>
+    
+                <ul class="footer-nav-list">
+                    <h1 class="title-text">Features</h1>
+    
+                    <li class="footer-nav-item subtitle-text">
+                        <a href="#">Business Marketing</a>
+                    </li>
+                    
+                    <li class="footer-nav-item subtitle-text">
+                        <a href="#">User Analytic</a>
+                    </li>
+    
+                    <li class="footer-nav-item subtitle-text">
+                        <a href="#">Live Chat</a>
+                    </li>
+    
+                    <li class="footer-nav-item subtitle-text">
+                        <a href="#">Unlimited Support</a>
+                    </li>
+                </ul>
+    
+                <ul class="footer-nav-list">
+                    <h1 class="title-text">Resources</h1>
+    
+                    <li class="footer-nav-item subtitle-text">
+                        <a href="#">IOS & Android</a>
+                    </li>
+                    
+                    <li class="footer-nav-item subtitle-text">
+                        <a href="#">Watch a Demo</a>
+                    </li>
+    
+                    <li class="footer-nav-item subtitle-text">
+                        <a href="#">Customers</a>
+                    </li>
+    
+                    <li class="footer-nav-item subtitle-text">
+                        <a href="#">API</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="made-in">
+                <p class="subtitle-text">Made With Love By Figmaland All Right Reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/slick.min.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+</html>
