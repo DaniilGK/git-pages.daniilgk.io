@@ -475,12 +475,12 @@ a:hover {
 
 .slider-arrows .slick-arrow.slick-prev {
     left: 20%;
-    background: url(/assets/svg/prev.svg) 0 0 / 100% no-repeat;
+    background: url(/git-pages.daniilgk.io/finance/assets/svg/prev.svg) 0 0 / 100% no-repeat;
 }
 
 .slider-arrows .slick-arrow.slick-next {
     right: 20%;
-    background: url(/assets/svg/next.svg) 0 0 / 100% no-repeat;
+    background: url(/git-pages.daniilgk.io/finance/assets/svg/next.svg) 0 0 / 100% no-repeat;
 }
 .slider-arrows .slick-arrow.slick-next:hover {
     fill: red;
@@ -583,7 +583,7 @@ a:hover {
 
 /*CONTACTS*/
 .background-input {
-    background: url(/assets/png/contact-cover.png) no-repeat right;
+    background: url(/git-pages.daniilgk.io/finance/assets/png/contact-cover.png) no-repeat right;
     background-size: 50%;
     background-position: 100% 55%;
 }
@@ -856,10 +856,6 @@ a:hover {
     }
     /*PRODUCT STOP*/
 
-    /*VIDEO*/
-  
-    /*VIDEO STOP*/
-
     /*CLIENT SAY*/
     .client-title {
         display: none;
@@ -906,7 +902,7 @@ a:hover {
 
     /*CONTACTS*/
     .background-input {
-        background: url(/assets/png/contact-cover.png) no-repeat center fixed;
+        background: url(/git-pages.daniilgk.io/finance/assets/png/contact-cover.png) no-repeat center fixed;
         background-size: cover;
         background-position: 0 0;
     }
@@ -938,23 +934,6 @@ a:hover {
 }
 
 @media (max-width: 425px) {
-    /*HEADER*/
-    // #header {
-    //     position: fixed;
-    //     width: 100%;
-    //     left: 0;
-    //     top: 0;
-    // }
-
-    // .header-content {
-    //     height: 80px;
-    // }
-
-    // .header-nav-list {
-    //     gap: 20px;
-    // }
-    /*HEADER STOP*/
-
     /*HOME SECTION*/
     .home-content {
         margin-top: 140px;
@@ -998,14 +977,6 @@ a:hover {
     .home-img {
         margin-top: 40px;
     }
-
-    // .places-cards-product {
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     gap: 30px;
-    //     margin-top: 50px;
-    // }
 
     .cards-product {
         width: 80%;
@@ -1111,167 +1082,6 @@ a:hover {
         font-size: 16px;
         font-weight: 700;
     }
-
-    /*SLIDER*/
-    // .slider {
-    //     position: relative;
-    //     margin: auto;
-    //     width: 90%;
-    //     margin-top: 80px;
-    // }
-
-    // .slider-item {
-    //     margin: auto;
-    //     text-align: center;
-    // }
-
-    // .slick-track {
-    //     display: flex;
-    //     align-items: flex-start;
-    // }
-
-    // .slick-list {
-    //     overflow: hidden;
-    // }
-
-    // .slider-text {
-    //     height: 305px;
-    //     display: flex;
-    //     flex-direction: column;
-    //     gap: 15px;
-    //     margin-top: 15px;
-    // }
-
-    // .auctor-text {
-    //     font-size: 14px;
-    //     font-weight: 600;
-    //     line-height: 24px;
-    //     letter-spacing: 0.20000000298023224px;
-    //     text-align: right;
-    // }
-
-    // .slider-arrows {
-    //     width: 50%;
-    //     margin: 25px auto auto;
-    //     display: flex;
-    //     justify-content: space-between;
-    //     align-items: center;
-    // }
-
-    // .slider-arrows .slick-arrow {
-    //     font-size: 0;
-    //     width: 20px;
-    //     height: 35px;
-    //     border: 0;
-    // }
-
-    // .slider-arrows .slick-arrow.slick-prev {
-    //     left: 20%;
-    //     background: url(/assets/svg/prev.svg) 0 0 / 100% no-repeat;
-    // }
-
-    // .slider-arrows .slick-arrow.slick-next {
-    //     right: 20%;
-    //     background: url(/assets/svg/next.svg) 0 0 / 100% no-repeat;
-    // }
-    // .slider-arrows .slick-arrow.slick-next:hover {
-    //     fill: red;
-    // }
-
-    // .slider-count {
-    //     font-size: 24px;
-    // }
-    /*SLIDER STOP*/
-    /*CLIENT ABOUT STOP*/
-
-    /*PRICING*/
-    // #pricing {
-    //     padding: 75px 0;
-    // }
-
-    // .places-cards-pricing {
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     gap: 30px;
-    //     margin-top: 60px;
-    // }
-
-    // .pricing-cards {
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     gap: 30px;
-    //     padding: 30px 0;
-    //     border: 1.5px solid #23A6F0;
-    //     border-radius: 5px;
-    // }
-
-    // .price {
-    //     display: flex;
-    //     align-items: center;
-    //     gap: 10px;
-    // }
-
-    // .number-price {
-    //     font-size: 40px;
-    //     font-weight: 700;
-    //     line-height: 57px;
-    //     letter-spacing: 0.20000000298023224px;
-    //     text-align: left;
-    //     color: #23A6F0;
-    // }
-
-    // .currency {
-    //     font-size: 16px;
-    //     font-weight: 700;
-    //     letter-spacing: 0.20000000298023224px;
-    //     text-align: left;
-    //     color: #23A6F0;
-    // }
-
-    // .per-month {
-    //     font-size: 14px;
-    //     font-weight: 600;
-    //     line-height: 24px;
-    //     letter-spacing: 0.20000000298023224px;
-    //     text-align: left;
-    //     color: #8EC2F2;
-    // }
-
-    // .tariff-parameters {
-    //     display: flex;
-    // }
-
-    // .parameter-pricing {
-    //     width: 90%;
-    //     display: flex;
-    //     flex-direction: column;
-    //     gap: 15px;
-    // }
-
-    // .parameter-item {
-    //     display: flex;
-    //     align-items: center;
-    //     gap: 10px;
-    // }
-
-    // .okey-svg {
-    //     width: 32px;
-    //     height: 32px;
-    // }
-
-    // .subtitle-text-black {
-    //     font-size: 14px;
-    //     line-height: 24px;
-    //     letter-spacing: 0.2px;
-    // }
-
-    // .price-button {
-    //     width: 90%;
-    //     height: 52px;
-    // }
-    /*PRICING STOP*/
 
     /*CONTACTS*/
     #contact {
