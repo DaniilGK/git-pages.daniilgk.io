@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click eye</title>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="script" href="./script.js">
+</head>
+ <style>
+
+body {
+  	text-align: center;
+  	font-family: monospace;
+	background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);;
+}
+
+p {
+  	background: black;
+  	color: #E30789;
+  	font-size: 80px;
+  	border-radius: 20px;
+}
+
+button {
+	font-size: 30px;
+	border-radius: 10px;
+	font-family: monospace;
+	border-color: black;
+	background-color:#FF00FF;
+	padding: 10px;
+	margin: 35px;
+	cursor: pointer;
+}
+
+button:hover {
+	transition: .2s;
+	background:#ae00ff;
+}
+
+.button-lacks {
+	background-color: red;
+}
+
+.eye {
+	margin: auto;
+	width: 175px;
+	height: 95px;
+	background-position: center;
+    background-image: url(Open.png);
+	cursor: pointer;
+}
+
+.eye-close {
+   	background-image: url(Close.png);
+	cursor: auto;
+} 
+
+
+</style>
+<body>
+	<p id="clicks1">0</p>
+	<button class="add">Buy an eye:
+		<p1 id="price1"></p1>
+	</button>
+	<div class="eye-container"></div>
+</body>
+<script>
+	let clicks = 0;
+	if (localStorage.clicks) {
+		clicks = Number(localStorage.clicks) 
+		document.querySelector("#clicks1").innerHTML = clicks;
+	}
+    function increment() {
+    		clicks += 1;
+    	document.querySelector("#clicks1").innerHTML = clicks;
+    	saveState();
+    };
+
+	function close (event) {
+		if (!event.target.classList.contains("eye-close")) {
+			event.target.classList.add("eye-close")
+			setTimeout(function(){
+				event.target.classList.remove("eye-close")
+			}, 1500)
+			increment();
+		}	
+	}
+
+	function addEye() {
+		const newEye = document.createElement("div");
+		newEye.classList.add("eye");
+		newEye.addEventListener("click", close)
+		eyeCnr.appendChild(newEye);
+		saveState();
+	}
+
+	let price = 3;
+	if (localStorage.price) {
+		price = Number(localStorage.price)
+	}
+
+	document.querySelector("#price1").innerHTML = price;
+	function buyAnEye() {
+		if (clicks < price) {
+			return;
+		} else {
+			clicks -= price;
+			price *= 2;
+			addEye();
+			document.querySelector("#price1").innerHTML = price;
+			document.querySelector("#clicks1").innerHTML =clicks;
+		}
+	}
+
+	function saveState() {
+		localStorage.clicks = clicks;
+		localStorage.price = price;
+		localStorage.childLen = eyeCnr.children.length;
+	}
+	const eyeCnr = document.querySelector(".eye-container");
+	const addB = document.querySelector(".add")
+    addB.addEventListener("click", buyAnEye);
+
+    let childLen = 1;
+    if (localStorage.childLen) {
+    	childLen = Number(localStorage.childLen)
+    } 
+    for (let i = 0; i < childLen; i++) {
+    	addEye();
+    }
+
+</script>
+</html>
