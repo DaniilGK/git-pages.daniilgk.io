@@ -13,6 +13,9 @@ body {
     max-width: 950px;
     margin: 0 auto;
     padding: 20px 20px;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
 }
 
 #interface-nudes {
@@ -83,7 +86,7 @@ body {
     position: fixed;
     width: 10vh;
     height: 10vh;
-    background-image: url("./img.style/super-heart.png");
+    background-image: url("./img/control/super-heart.png");
     background-repeat: no-repeat;
     background-size: contain;
 }
