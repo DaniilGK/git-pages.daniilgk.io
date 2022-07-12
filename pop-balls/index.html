@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="//cdn.jsdelivr.net/npm/phaser@3.24.1/dist/phaser.min.js"></script>
+        <script src="./js/menu.js"></script>
+        <script src="./js/games.js"></script>
+    </head>
+    <body>
+        <script>
+
+            const phaserConfig = {
+                type: Phaser.AUTO,
+                width: 600,
+                height: 900,
+                backgroundColor: "#5DACD8",
+                scene: [menu, games ]
+            };
+
+            const game = new Phaser.Game(phaserConfig);
+
+        </script>
+    </body>
+</html>
