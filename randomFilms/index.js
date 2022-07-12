@@ -41,32 +41,38 @@ function createInterface(array) {
     }
 }
 createInterface(newArr);
-button.addEventListener("click", () => {
-    block.style.display = "none";
-    listLen = list.children.length;
-    lenWithStyle = listLen * 350;
-    randomNum = Math.floor(Math.random() * listLen) + 1;
-    list.style.right = `${lenWithStyle - (randomNum * 350)}px`;
-    leftoverMovies.innerHTML = `${listLen}`;
-});
 
-del.addEventListener("click", () => {
-    block.style.display = "flex";
-    list.children[(lenWithStyle - (randomNum * 350)) / 350].remove();
-    listLen = list.children.length;
-    newArr = [];
-    for(let i = 0; i < list.children.length; i++) {
-        newArr.push(list.children[i].innerText);
-    }
-    leftoverMovies.innerHTML = `${listLen}`;
-    saveState();
-});
-
-copy.addEventListener("click", () => {
+    button.addEventListener("click", () => {
+        button.style.backgroundSize = "80%";
+        setTimeout(() => {button.style.backgroundSize = "100%";}, 300);
     
-});
+        block.style.display = "none";
+        listLen = list.children.length;
+        lenWithStyle = listLen * 350;
+        randomNum = Math.floor(Math.random() * listLen) + 1;
+        list.style.right = `${lenWithStyle - (randomNum * 350)}px`;
+        leftoverMovies.innerHTML = `${listLen}`;
+    });
+
+    del.addEventListener("click", () => {
+        del.style.background = "#ff8fe3";
+        setTimeout(() => {del.style.background = ""}, 300);
+    
+        block.style.display = "flex";
+        list.children[(lenWithStyle - (randomNum * 350)) / 350].remove();
+        listLen = list.children.length;
+        newArr = [];
+        for(let i = 0; i < list.children.length; i++) {
+            newArr.push(list.children[i].innerText);
+        }
+        leftoverMovies.innerHTML = `${listLen}`;
+        saveState();
+    });
+    
+    // copy.addEventListener("click", () => {
+    // });
 
 function saveState() {
-    localStorage.leftoverMovies = leftoverMovies.innerHTML = `${listLen}`;;
+    localStorage.leftoverMovies = leftoverMovies.innerHTML = `${listLen}`;
     localStorage.newArr = newArr;
 }
