@@ -13,18 +13,32 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100vh;
   background: grey;
 }
 
 @media (max-width: 450px) {
-  .copy {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    top: calc(100% - 600px);
+  .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+  .wrapper .copy {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -41,7 +55,7 @@ body {
     background: #ff37cd;
     cursor: pointer;
   }
-  .main-container {
+  .wrapper .main-container {
     position: relative;
     margin: auto;
     padding: 20px;
@@ -61,7 +75,7 @@ body {
     border: 2px solid #fff;
     background: #fc77d7e6;
   }
-  .main-container .block {
+  .wrapper .main-container .block {
     position: absolute;
     z-index: 2;
     display: -webkit-box;
@@ -78,7 +92,7 @@ body {
     height: 60px;
     background: #FFF;
   }
-  .main-container .window {
+  .wrapper .main-container .window {
     overflow: hidden;
     padding: 4px;
     display: -webkit-box;
@@ -93,7 +107,7 @@ body {
     border: 3px solid #ff37cd;
     background: #fff;
   }
-  .main-container .window .list {
+  .wrapper .main-container .window .list {
     position: relative;
     right: 0;
     display: -webkit-box;
@@ -106,10 +120,10 @@ body {
     height: 45px;
     font-size: 16px;
   }
-  .main-container .window .list p {
+  .wrapper .main-container .window .list p {
     word-wrap: break-word;
   }
-  .main-container .num-films {
+  .wrapper .main-container .num-films {
     position: absolute;
     top: 153px;
     right: 13px;
@@ -128,7 +142,7 @@ body {
     border: 3px solid #ff37cd;
     background: #FFF;
   }
-  .main-container .button {
+  .wrapper .main-container .button {
     margin-top: 27px;
     width: 100px;
     height: 100px;
@@ -138,13 +152,7 @@ body {
     background-size: 100%;
     cursor: pointer;
   }
-  .del {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    top: calc(100% - 150px);
+  .wrapper .del {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
