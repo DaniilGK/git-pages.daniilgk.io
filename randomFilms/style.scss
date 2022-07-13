@@ -22,16 +22,36 @@ body {
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        .copy {
+        .add-new-film {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 200px;    
+            gap: 8px;
+            width: 80%;    
             height: 50px;
+            padding: 4px;
             border-radius: 6px;
             border: 3px solid #ffffff;
-            background: #ff37cd;   
-            cursor: pointer;    
+            background: #d854b7;   
+            cursor: pointer;   
+            input {
+                width: 100%;
+                height: 100%;
+                font-size: 22px;
+                outline: none;
+            } 
+            .add-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 100%;
+                border-radius: 6px;
+                border: 2px solid #ffffff;
+                background: rgb(211, 25, 171);  
+                font-size: 20px;
+                color: #fff;
+            }
         }
         .main-container {
             position: relative;
@@ -79,7 +99,7 @@ body {
                     }
                 }
             }
-            .num-films {
+            .account-films {
                 position: absolute;
                 top: 153px;
                 right: 13px;
@@ -92,7 +112,7 @@ body {
                 border: 3px solid #ff37cd;
                 background: #FFF;
             }
-            .button {
+            .pig {
                 margin-top: 27px;
                 width: 100px;   
                 height: 100px;
